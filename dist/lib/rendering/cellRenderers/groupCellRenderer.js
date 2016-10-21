@@ -191,9 +191,9 @@ var GroupCellRenderer = (function (_super) {
         var eContractedIcon = utils_1.Utils.createIconNoSpan('groupContracted', this.gridOptionsWrapper, null, svgFactory.createGroupExpandedIcon);
         this.eExpanded.appendChild(eExpandedIcon);
         this.eContracted.appendChild(eContractedIcon);
-        this.addDestroyableEventListener(this.eExpanded, 'click', this.onExpandOrContract.bind(this));
-        this.addDestroyableEventListener(this.eContracted, 'click', this.onExpandOrContract.bind(this));
-        this.addDestroyableEventListener(eGroupCell, 'dblclick', this.onExpandOrContract.bind(this));
+       // this.addDestroyableEventListener(this.eExpanded, 'click', this.onExpandOrContract.bind(this));
+       // this.addDestroyableEventListener(this.eContracted, 'click', this.onExpandOrContract.bind(this));
+        this.addDestroyableEventListener(eGroupCell, 'click', this.onExpandOrContract.bind(this));
         // expand / contract as the user hits enter
         this.addDestroyableEventListener(eGroupCell, 'keydown', this.onKeyDown.bind(this));
         this.showExpandAndContractIcons();
